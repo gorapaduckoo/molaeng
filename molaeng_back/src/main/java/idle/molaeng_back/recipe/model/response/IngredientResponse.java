@@ -7,18 +7,19 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class IngredientResponse {
 
+
+    @Getter
     public static class IngredientPreview {
         @ApiParam("재료 id")
-        public long ingredientId;
+        private long ingredientId;
         @ApiParam("재료명")
-        public String ingredientName;
+        private String ingredientName;
 
         @ApiParam("선택여부")
-        public boolean selected;
+        private boolean selected;
 
         @Builder
         public IngredientPreview(Ingredient ingredient) {
@@ -28,15 +29,16 @@ public class IngredientResponse {
         }
     }
 
+    @Getter
     public static class IngredientInfo {
         @ApiParam("재료 id")
-        public long ingredientId;
+        private long ingredientId;
         @ApiParam("재료명")
-        public String ingredientName;
+        private String ingredientName;
         @ApiParam("레시피를 만드는 데 필요한 재료 무게")
-        public int needWeight;
+        private int needWeight;
         @ApiParam("필요한 재료의 무게 단위")
-        public String weightUnit;
+        private String weightUnit;
 
         @Builder
         public IngredientInfo(Ingredient ingredient) {
@@ -47,17 +49,18 @@ public class IngredientResponse {
         }
     }
 
+    @Getter
     public static class IngredientPrice {
         @ApiParam("재료 id")
-        public long ingredientId;
+        private long ingredientId;
         @ApiParam("재료명")
-        public String ingredientName;
+        private String ingredientName;
         @ApiParam("기준 무게 당 재료 가격")
-        public double ingredientPrice;
+        private double ingredientPrice;
         @ApiParam("기준 무게")
-        public int ingredientWeight;
+        private int ingredientWeight;
         @ApiParam("기준 무게의 무게단위")
-        public String ingredientUnit;
+        private String ingredientUnit;
 
         @Builder
         public IngredientPrice(Ingredient ingredient){
