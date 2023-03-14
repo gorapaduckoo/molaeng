@@ -72,7 +72,7 @@
 - 레시피 찜/최근 본 레시피 조회 기능
 
 # 📃 기능 명세서
-![기능명세서1](https://user-images.githubusercontent.com/67768976/200232142-a53ebc34-2ab1-4c00-b3dd-2c7f80e258b9.png)
+![기능명세서1](https://user-images.githubusercontent.com/67768976/225080811-14d35ba7-19bd-42b3-af7b-55b1eec03b81.png)
 ![기능명세서2](https://user-images.githubusercontent.com/67768976/200232193-2200b261-2118-4c0c-a1d4-2fd3961ac5da.png)
 ![기능명세서3](https://user-images.githubusercontent.com/67768976/200232222-02e29646-774f-4877-af50-9c5a1db3bdce.png)
 
