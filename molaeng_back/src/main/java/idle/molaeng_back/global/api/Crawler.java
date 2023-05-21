@@ -14,7 +14,7 @@ import java.net.URLEncoder;
 @Component
 public class Crawler {
 
-    // 외부에서 크롤링 사이트를 수정할 수 없도록 private로 선언하는게 좋지않을까
+
     private final String URL = "https://www.ssg.com/search.ssg?target=all&query=";
     private String query;
 
