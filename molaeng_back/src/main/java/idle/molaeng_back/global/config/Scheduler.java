@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -26,14 +25,13 @@ public class Scheduler {
         for (Ingredient i : ingredientList) {
             if(i.getIngredientIsCrawl()==0) continue;
             double newPrice = crawler.getIngredientPrice(ingredientRepository.findById(i.getIngredientId()));
-            if(newPrice > 0) {
-                i.updatePrice(newPrice);
-                ingredientRepository.save(i);
-            }
+            if(newPrice <= 0) continue;
+            i.updatePrice(newPrice);
+
             try {
                 Thread.sleep(3000);
             } catch(InterruptedException e) {
-                System.out.println("error!");
+                e.printStackTrace();
             }
 
         }
